@@ -1,81 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Satyasheel &#8226; Machine Learning / Student / Wanna Be Photographer / Dota2</title>
-
-  <link rel="apple-touch-icon" href="/images/me.png"/>
-  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://mlgruby.github.io/favicon.ico" />
-
-  <link rel="stylesheet" href="/assets/normalize.css">
-  <link rel="stylesheet" href="/assets/main.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-
-  <link rel="canonical" href="http://mlgruby.github.io/">
-
-  <meta name="author" content="Satyasheel">
-  <meta name="description" content="Machine Learning / Student / Wanna Be Photographer / Dota2"/>
-
-  <meta property="og:title" content="Machine Learning / Student / Wanna Be Photographer / Dota2"/>
-  <meta property="og:url" content="http://mlgruby.github.io/"/>
-  <meta property="og:image" content="http://mlgruby.github.io/images/me.png"/>
-  <meta property="og:description" content=""/>
-  <meta property="og:site_name" content="Machine Learning / Student / Wanna Be Photographer / Dota2">
-
-  
-</head>
-
-  <body>
-
-  <div class="wrapper">
+---
+layout: base
+---
+<div class="wrapper">
     <header>
-        
+        {% if site.compass.logo %}
         <div class="logo-container">
-          <a class="logo" href="" style="background-image: url('/images/me.png')"></a>
+          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
         </div>
-        
+        {% endif %}
 
-        
-        <div class="author-container"><h1>Satyasheel</h1></div>
-        
+        {% if site.compass.author %}
+        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+        {% endif %}
 
-        
-        <div class="tagline-container"><p>Machine Learning / Student / Wanna Be Photographer / Dota2</p></div>
-        
+        {% if site.compass.tagline %}
+        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
+        {% endif %}
     </header>
     <main>
-      
+      {% if site.compass.include_content %}
       <div class="content">
-        <h2>About</h2>
-<p> <i class="fa fa-briefcase" aria-hidden="true"></i> Data Scientist at <a href="http://www.datareply.co.uk/" target="_blank">Data Reply</a> and <i class="fa fa-graduation-cap"></i> Graduate student at <a href="https://www.royalholloway.ac.uk/home.aspx" target="_blank"a>Royal Holloway University of London</a>, pursuing MSc <a href="https://en.wikipedia.org/wiki/Machine_learning" target="_blank">Machine Learning</a>.  DIY enthusiast plus doing <a href="https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013" target="_blank">Udacity Self Driving Car Engineer</a>. Weekend <i class="fa fa-steam-square fa-lg"></i> <a href="https://steamcommunity.com/profiles/76561198091476636/" target="_blank">Dota2</a> player and love to click <i class="fa fa-camera"></i> monochrome stills (level amature).</p>
-<hr />
-
-<ul class="fa-ul main-list">
-  <li class="main-list-item">
-    <span class="fa fa-github fa-lg main-list-item-icon"></span>
-    <a href="https://github.com/mlgruby" target="_blank">Code</a>
-  </li>
-  <li class="main-list-item">
-    <span class="fa fa-file-text-o fa-lg main-list-item-icon"></span>
-    <a href="https://medium.com/@gruby/" target="_blank">Blog</a>
-  </li>
-    <li class="main-list-item">
-    <span class="fa fa-linkedin fa-lg main-list-item-icon"></span>
-    <a href="https://in.linkedin.com/in/ss6012" target="_blank"> LinkedIn</a>
-  </li>
-  <li class="main-list-item">
-    <span class="fa fa-twitter fa-lg main-list-item-icon"></span>
-    <a href="https://twitter.com/ss6012" target="_blank"> twitter</a>
-  </li>
-</ul>
-
+        {% include content.html %}
       </div>
-      
+      {% endif %}
     </main>
 </div>
-
-
-  </body>
-</html>
